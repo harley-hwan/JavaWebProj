@@ -78,7 +78,12 @@ public class BeadGame {
 			System.out.println("\n몇 개의 구슬을 움켜쥐겠습니까? (1 ~ " + Min + ")");
 			
 			int myPick = sc.nextInt();
-
+			
+			while (myPick > Min) {	// 최대 구슬 수보다 내가 고른 수가 많다면 다시 골라야한다.
+				System.out.println("\n다시 고르세요 (1 ~ " + Min + ")");
+				myPick = sc.nextInt();
+			}
+			
 			if (bPick == 0) {
 				System.out.println("상대방은 '짝'을 선택했습니다.");
 				if (myPick % 2 == 0) {
