@@ -35,5 +35,6 @@ public class FoodMenu {
 		
 		System.out.println("오늘의 메뉴는 '" + get_Menu + "' 입니다.");
 		
+		sc.close();
 	}
 }
