@@ -25,6 +25,7 @@ public class BeadGame {
 					System.out.println("게임에서 승리했습니다.");
 					System.out.println("당신은 생존했습니다.");
 				}
+				break;
 			}
 
 			int aPick = randNum.nextInt(a) + 1;
@@ -55,6 +56,19 @@ public class BeadGame {
 
 			System.out.println("\n당신의 구슬은 " + a + "개 남았습니다.");
 			System.out.println("상대방의 구슬은 " + b + "개 남았습니다.");
+			
+			if (a <= 0 || b <= 0) {
+				if (a == 0) {
+					System.out.println("게임에서 패배했습니다.");
+					System.out.println("당신은 사망했습니다.");
+				}
+				else {
+					System.out.println("게임에서 승리했습니다.");
+					System.out.println("당신은 생존했습니다.");
+				}
+				break;
+			}
+			
 			int Min = 21;
 			if (a >= b) {
 				Min = b;
@@ -68,30 +82,35 @@ public class BeadGame {
 			if (bPick == 0) {
 				System.out.println("상대방은 '짝'을 선택했습니다.");
 				if (myPick % 2 == 0) {
-					System.out.println("\n상대방이 이겼습니다.");
+					System.out.println("당신이 이겼습니다.");
 					System.out.println("당신의 구슬을 상대방에게 " + myPick + "개를 뺏깁니다.");
 					a = a - myPick;
 					b = b + myPick;
+					
 				} else {
-					System.out.println("\n상대방이 졌습니다.");
+					System.out.println("당신이 이겼습니다.");
 					System.out.println("당신은 상대방의 구슬을 " + myPick + "개를 빼앗아옵니다.");
 					a = a + myPick;
 					b = b - myPick;
 				}
+				System.out.println("\n당신의 구슬은 " + a + "개 남았습니다.");
+				System.out.println("상대방의 구슬은 " + b + "개 남았습니다.\n");
 
 			} else {
-				System.out.println("상대방은 '홀'을 선택했습니다.");
+				System.out.println("\n상대방은 '홀'을 선택했습니다.");
 				if (myPick % 2 != 0) {
-					System.out.println("\n상대방이 이겼습니다.");
+					System.out.println("상대방이 이겼습니다.");
 					System.out.println("당신의 구슬을 상대방에게 " + myPick + "개를 뺏깁니다.");
 					a = a - myPick;
 					b = b + myPick;
 				} else {
-					System.out.println("\n상대방이 졌습니다.");
+					System.out.println("당신이 이겼습니다.");
 					System.out.println("당신은 상대방의 구슬을 " + myPick + "개를 빼앗아옵니다.");
 					a = a + myPick;
 					b = b - myPick;
 				}
+				System.out.println("\n당신의 구슬은 " + a + "개 남았습니다.");
+				System.out.println("상대방의 구슬은 " + b + "개 남았습니다.\n");
 			}
 
 		}
