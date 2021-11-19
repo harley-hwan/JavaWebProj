@@ -12,7 +12,7 @@ public class GlassBridge2 {
 		Scanner sc = new Scanner(System.in);
 		
 		int stepGlass = 16;		// 징검다리
-		int countDead = 0;		// 생존자 수
+		int countDead = 0;		// 사망자 수
 		int people = 10;		// 참가자 수
 		int step = 0;			// 내 직전의 사람이 건넌 다리 수
 		
