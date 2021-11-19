@@ -3,32 +3,35 @@ package hello2;
 import java.util.Random;
 import java.util.Scanner;
 
-public class BeadGame {
+public class MarbleGame {
 
 	public static void main(String[] args) {
 		// 구슬 게임
 		Random randNum = new Random();
 		Scanner sc = new Scanner(System.in);
 
-		int Bead = 10; // 구슬 갯수
+		int marble = 10; // 구슬 갯수
 
-		int a = Bead;
-		int b = Bead; // a, b 각각 10개씩 가지고 시작함.
+		int a = marble;
+		int b = marble; // a, b 각각 10개씩 가지고 시작함.
 
 		while (true) {
 			if (a <= 0 || b <= 0) {
 				if (a == 0) {
 					System.out.println("게임에서 패배했습니다.");
 					System.out.println("당신은 사망했습니다.");
-				}
-				else {
+				} else {
 					System.out.println("게임에서 승리했습니다.");
 					System.out.println("당신은 생존했습니다.");
 				}
 				break;
 			}
 
-			int aPick = randNum.nextInt(a) + 1;
+			int Min = 21;	// 두 플레이어 중 최소의 구슬 개수만 배팅 가능
+			if (a >= b) { Min = b; } 
+			else 		{ Min = a; }
+
+			int aPick = randNum.nextInt(Min) + 1;
 
 			int ans = 0;
 
@@ -56,34 +59,32 @@ public class BeadGame {
 
 			System.out.println("\n당신의 구슬은 " + a + "개 남았습니다.");
 			System.out.println("상대방의 구슬은 " + b + "개 남았습니다.");
-			
+
 			if (a <= 0 || b <= 0) {
 				if (a == 0) {
 					System.out.println("게임에서 패배했습니다.");
 					System.out.println("당신은 사망했습니다.");
-				}
-				else {
+				} else {
 					System.out.println("게임에서 승리했습니다.");
 					System.out.println("당신은 생존했습니다.");
 				}
 				break;
 			}
+
+			// 두 플레이어 중 최소의 구슬 개수만 배팅 가능
+			Min = 21;	
+			if (a >= b) { Min = b; }
+			else 		{ Min = a; }
 			
-			int Min = 21;
-			if (a >= b) {
-				Min = b;
-			} else {
-				Min = a;
-			}
 			System.out.println("\n몇 개의 구슬을 움켜쥐겠습니까? (1 ~ " + Min + ")");
-			
+
 			int myPick = sc.nextInt();
-			
-			while (myPick > Min) {	// 최대 구슬 수보다 내가 고른 수가 많다면 다시 골라야한다.
+
+			while (myPick > Min) { // 최대 구슬 수보다 내가 고른 수가 많다면 다시 골라야한다.
 				System.out.println("\n다시 고르세요 (1 ~ " + Min + ")");
 				myPick = sc.nextInt();
 			}
-			
+
 			if (bPick == 0) {
 				System.out.println("상대방은 '짝'을 선택했습니다.");
 				if (myPick % 2 == 0) {
@@ -91,7 +92,7 @@ public class BeadGame {
 					System.out.println("당신의 구슬을 상대방에게 " + myPick + "개를 뺏깁니다.");
 					a = a - myPick;
 					b = b + myPick;
-					
+
 				} else {
 					System.out.println("당신이 이겼습니다.");
 					System.out.println("당신은 상대방의 구슬을 " + myPick + "개를 빼앗아옵니다.");
