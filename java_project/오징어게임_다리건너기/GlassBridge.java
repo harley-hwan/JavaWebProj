@@ -25,8 +25,6 @@ public class GlassBridge {
 				ans = 2; // right (오른쪽 징검다리)
 			}
 			
-			
-			
 			try {
 				// 숫자를 입력해야 되는데 문자를 입력할 경우 에러나서 프로그램 종료가 됨
 				// 이렇게 예외처리를 하면 된다
@@ -42,9 +40,7 @@ public class GlassBridge {
 				sc.nextLine();   // 개행문자 처리
 				continue;
 			}
-			
-			
-			
+
 //			while (true) {	
 //				System.out.println("왼쪽(1) or 오른쪽(2) ?");
 //				choose = sc.nextInt();

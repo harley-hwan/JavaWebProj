@@ -29,8 +29,7 @@ public class GlassBridge2 {
 				}	
 				else {					// 왼쪽을 골랐는데 오른쪽이 정답
 					countDead++;
-					System.out.println(countDead + "번째 참가자가 사망했습니다.");
-					
+					System.out.println(countDead + "번째 참가자가 사망했습니다.");	
 				}
 			}
 			else {						// 오른쪽 징검다리를 고름
