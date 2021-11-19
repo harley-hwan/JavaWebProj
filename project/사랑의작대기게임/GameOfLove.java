@@ -1,3 +1,4 @@
+package 사랑의작대기게임;
 
 
 import java.util.Random;

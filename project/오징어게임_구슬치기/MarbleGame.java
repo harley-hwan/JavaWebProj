@@ -1,4 +1,4 @@
-
+package 오징어게임_구슬치기;
 
 import java.util.Random;
 import java.util.Scanner;

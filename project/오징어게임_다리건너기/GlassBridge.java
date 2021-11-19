@@ -1,4 +1,4 @@
-package hello2;
+package 오징어게임_다리건너기;
 
 import java.util.*;
 
