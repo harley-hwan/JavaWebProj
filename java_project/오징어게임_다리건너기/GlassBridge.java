@@ -19,15 +19,15 @@ public class GlassBridge {
 		System.out.println("여러분은 15개의 징검다리를 건너시면 됩니다.\n");
 		
 		while (true) {
+			step++;
+			
 			if (randNum.nextInt(2) == 0) {
 				ans = 1; // left (왼쪽 징검다리)
 			} else {
 				ans = 2; // right (오른쪽 징검다리)
 			}
 			
-			while (true) {
-				step++;
-				
+			while (true) {	
 				System.out.println("왼쪽(1) or 오른쪽(2) ?");
 				choose = sc.nextInt();
 				if (choose == 1 || choose == 2)
