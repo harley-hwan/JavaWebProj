@@ -37,7 +37,7 @@ public class Calc {
 		int iVal = (int)(dVal* (m/1000));
 		
 //		System.out.println("m = " + m);
-		if (plusMinus == 1) return m + (iVal*1000);
+		if (plusMinus == 1) 	return m + (iVal*1000);
 		else 				return m - (iVal*1000);
 	}
 }
