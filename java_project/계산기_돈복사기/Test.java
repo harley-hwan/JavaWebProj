@@ -1,4 +1,4 @@
-package calc;
+package 계산기_돈복사기;
 
 public class Test {
 	// 메소드

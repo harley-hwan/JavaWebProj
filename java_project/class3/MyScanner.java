@@ -1,4 +1,4 @@
-package 계산기_돈복사기;
+package class3;
 
 public class MyScanner {	
 	// 변수
