@@ -38,6 +38,6 @@ public class Calc {
 		
 //		System.out.println("m = " + m);
 		if (plusMinus == 1) 	return m + (iVal*1000);
-		else 		return m - (iVal*1000);
+		else 			return m - (iVal*1000);
 	}
 }
