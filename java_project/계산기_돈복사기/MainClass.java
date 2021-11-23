@@ -1,4 +1,4 @@
-package class3;
+package 계산기_돈복사기;
 
 import java.util.Scanner;
 
