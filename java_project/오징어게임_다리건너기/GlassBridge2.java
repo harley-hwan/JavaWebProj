@@ -50,6 +50,6 @@ public class GlassBridge2 {
 		}
 		
 		// 5번째 사람이 통과했다면, 그 뒤의 사람들도 다 통과
-		System.out.println("이번 게임에서는 생존한 참가자는 " + (people - countDead) + "명입니다.");	
+		System.out.println("이번 게임에서 생존한 참가자는 " + (people - countDead) + "명입니다.");	
 	}
 }
