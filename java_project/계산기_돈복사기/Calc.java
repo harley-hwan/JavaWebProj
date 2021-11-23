@@ -31,7 +31,7 @@ public class Calc {
 		Random random = new Random();
 		
 		double dVal = Math.random();
-		System.out.println("dVal = " + dVal );
+//		System.out.println("dVal = " + dVal );
 		int plusMinus = random.nextInt(2);
 		
 		int iVal = (int)(dVal* (m/1000));
