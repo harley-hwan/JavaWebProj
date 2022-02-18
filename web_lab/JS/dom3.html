@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+    <script>
+        function createTag() {
+            var div = document.getElementById("a1");
+
+            //createElement : 태그를 생성한다
+            var tag_a = document.createElement("a");
+            tag_a.href = "http://www.google.com";
+            tag_a.style.color = "red";
+
+            //createTextNode : 문자열 노드를 생성
+            var tag_str = document.createTextNode("구글");
+            tag_a.appendChild(tag_str);
+            //<a href="http://www.google.com">구글</a>
+
+            var tag_img = document.createElement("img");
+            tag_img.src = "../img/bmw.png";
+            tag_a.appendChild(tag_img);
+
+            //appendChild : 태그 내부에 다른 태그를 추가
+            div.appendChild(tag_a);
+        }
+    </script>
+</head>
+<body>
+    <div id="a1"></div>
+    <button onclick="createTag()">태그 객체 만들기</button>
+</body>
+</html>

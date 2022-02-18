@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media쿼리 2</title>
+    <style>
+        /* 데스크탑 */
+        @media all and (min-width:1025px) {
+            .c1, .c2 {
+                width : 400px;
+            }
+        }
+        /* 태블릿 */
+        @media all and (min-width:768px) and (max-width:1024px)
+        {
+            .c1, .c2 {
+                width: 300px;
+            }
+        }
+
+        /* 데스크탑 & 태블릿 */
+        @media all and (min-width:768px) {
+            
+        }
+
+
+        /* 모바일 */
+        @media all and (max-width:767px) {
+            .c1, .c2 {
+                width: 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <img src="../img/icon2.png" class="c1"/>
+    <img src="../img/icon2.png" class="c2"/>
+</body>
+</html>

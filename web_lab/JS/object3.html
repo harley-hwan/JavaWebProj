@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 3</title>
+    <script>
+        function Obj() {
+            document.write("생성자 함수 호출<br/>");
+            this.a1 = 100;
+            this.a2 = 200;
+            this.a3 = function() {
+                document.write("a3의 익명함수 호출<br/>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        //생성자 함수를 이용한 객체 생성
+        var obj1 = new Obj();
+        var obj2 = new Obj();
+
+        document.write("obj1.a1 : " + obj1.a1 + "<br/>");
+        document.write("obj1.a2 : " + obj1.a2 + "<br/>");
+        document.write("obj2.a1 : " + obj2.a1 + "<br/>");
+        document.write("obj2.a2 : " + obj2.a2 + "<br/>");
+
+        obj1.a1 = 500;
+
+        document.write("obj1.a1 : " + obj1.a1 + "<br/>");
+        document.write("obj1.a2 : " + obj1.a2 + "<br/>");
+        document.write("obj2.a1 : " + obj2.a1 + "<br/>");
+        document.write("obj2.a2 : " + obj2.a2 + "<br/>");
+
+        obj1.a3();
+        obj2.a3();
+
+    </script>
+</body>
+</html>

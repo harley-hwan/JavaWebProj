@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+    <style>
+        .c1:link {
+            color: red;
+            background-color: black;
+        }
+        .c1:visited {
+            color: yellow;
+            background-color: blue;
+        }
+        .c1:hover {
+            color: fuchsia;
+            background-color: lightgreen;
+        }
+        .c1:active {
+            color: green;
+            background-color: aqua;
+        }
+        .c2:hover {
+            border: 1px solid blue;
+        }
+        .c2:active {
+            border: 1px solid red;
+        }
+        .c3 {
+            border: 1px solid black;
+            width : 200px;
+            height: 200px;
+        }
+        .c3:hover {
+            background-color: red;
+        }
+        .c3:active {
+            background-color: yellow;
+        }
+        .c4:focus {
+            background-color: yellow;
+        }
+        .c5 > li:first-child {
+            color: red;
+        }
+        .c5 > li:last-child {
+            color: blue;
+        }
+        .c5 > li:nth-child(3) {
+            color: orange;
+        }
+        .c5 > li:nth-child(2n + 1) {
+            color: red;
+        }
+        p:lang(ko) {
+            color: red;
+        }
+        p:lang(en) {
+            color: blue;
+        }
+        /* 첫줄만 색상 변경 */
+        .c5::first-line {
+            color : red;
+        }
+        /* 첫 글자만 */
+        .c5::first-letter {
+            font-size: 30px;
+        }
+        .c6::before { /*이전*/
+            content: url(../img/logo2.png);
+        }
+        .c6::after { /*이후*/
+            content: url(../img/logo2.png);
+        }
+    </style>
+</head>
+<body>
+    <!-- 태그의 상태에 따라 태그를 선택할 수 있도록 하는 개념 -->
+    <a href="#" class="c1">링크</a><br/>
+    <hr/>
+    <img src="../img/icon2.png" class="c2"/><br/>
+    <hr/>
+    <div class="c3"></div>
+    <hr/>
+    <input type="text" class="c4"/><br/>
+    <hr/>
+    <ul class="c5">
+        <li>항목1</li>
+        <li>항목2</li>
+        <li>항목3</li>
+        <li>항목4</li>
+        <li>항목5</li>
+        <li>항목6</li>
+    </ul>
+    <hr/>
+    <p lang="ko">한국어</p>
+    <p lang="en">english</p>
+    <hr/>
+    <p class="c5">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="c6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</body>
+</html>

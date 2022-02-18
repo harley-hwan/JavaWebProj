@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@import "rule2.css";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Explora&display=swap');
+
+.c1 {
+    color: red;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Explora', cursive;
+}
+
+.c3 {
+    /* important : css 변경 금지 */
+    color:yellow !important;
+}
+
+.c3 {
+    color: red;
+}

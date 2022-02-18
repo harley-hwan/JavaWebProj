@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form4</title>
+</head>
+<body>
+    <form action="result.html" method="get">
+        <!-- text 문자열 입력 기본, type속성에 지원하지않는 값을 넣으면 자동으로 text 지원 -->
+        <input type="text" name="a1"/><br/>
+        <!-- password 비밀번호 입력 -->
+        <input type="password" name="a2"/><br/>
+        <!-- 멀티라인 rows 줄수, cols 길이-->
+        <textarea name="a3" rows="5" cols="30"></textarea><br/>
+        <textarea name="a4" style="width: 200px; height: 50px; resize: none;"></textarea><br/>
+        
+        <!-- checkbox -->
+        <fieldset style="width: 300px;">
+        <legend>체크박스</legend>
+        <input type="checkbox" name="a5" value="1" checked="checked">체크박스1<br/>
+        <input type="checkbox" name="a6" value="2">체크박스2<br/>
+        <input type="checkbox" name="a7" value="3" checked="checked">체크박스3<br/>
+        </fieldset>
+
+        <!-- radio -->
+        <fieldset style="width:300px">
+        <legend>라디오버튼</legend>
+        <input type="radio" name="a8" value="1">라디오버튼1<br/>
+        <input type="radio" name="a8" value="2" checked="checked">라디오버튼2<br/>
+        <input type="radio" name="a8" value="3">라디오버튼3<br/>
+        </fieldset>
+
+        <!-- select -->
+        <select name="a9" multiple="multiple">
+            <option value="1">항목1</option>
+            <option value="2" selected="selected">항목2</option>
+            <option value="3">항목3</option>
+            <option value="4">항목4</option>
+            <option value="5">항목5</option>
+        </select><br/>
+
+
+        <!-- file  -->
+        <!-- MIME image/*, audio/*, video/* -->
+        <input type="file" name="a10" accept="image/*"><br/>
+
+        <!-- hidden -->
+        <input type="hidden" name="a11" value="1234"/><br/>
+
+        <button type="submit">확인</button>
+    </form>
+</body>
+</html>

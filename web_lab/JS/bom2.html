@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM 2</title>
+    <script>
+        function get_href() {
+            var div = document.getElementById("result");
+
+            div.innerHTML = location.href;
+        }
+
+        function set_href() {
+            //location.href = "http://google.com";
+            location.replace("http://google.com");
+        }
+
+        window.onload = function() {
+            var div = document.getElementById("result");
+
+            div.innerHTML = "쿠키사용여부 : " + navigator.cookieEnabled + "<br/>" +
+                            "브라우저이름 : " + navigator.appName + "<br/>" +
+                            "브라우저코드네임 : " + navigator.appCodeName + "<br/>" +
+                            "브라우저 엔진 : " + navigator.product + "<br/>" +
+                            "브라우저 버전 : " + navigator.appVersion + "<br/>" +
+                            "브라우저 종합정보 : " + navigator.userAgent + "<br/>";
+        }
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <button onclick="get_href()">주소 가져오기</button>
+    <button onclick="set_href()">주소 설정하기</button>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체</title>
+</head>
+<body>
+    <script>
+        var arr = [10, 20, 30, 40, 50];
+
+        //쉼표로 구분하여 하나의 문자열로 만듬
+        var a1 = arr.toString();
+        document.write("a1 : " + a1 + "<br/>");
+
+        //지정한 문자열로 구분하여 하나의 문자열로 만듬
+        var a2 = arr.join("_");
+        document.write("a2 : " + a2 + "<br/>");
+
+        document.write("길이 : " + arr.length + "<br/>");
+        //배열 뒤에 새로운 멤버를 추가
+        arr.push(60);
+        arr.push(60, 40, 60, 60);
+        document.write(arr.toString() + "<br/>");
+        document.write("길이 : " + arr.length + "<br/>");
+
+        //배열 마지막에 있는 멤버를 반환하고 제거
+        var a3 = arr.pop();
+        document.write(arr.toString() + "<br/>");
+        document.write("a3 : " + a3 + "<br/>");
+        document.write("길이 : " + arr.length + "<br/>");
+
+        //배열 제일 앞에 있는 멤버를 반환하고 제거
+        var a4 = arr.shift();
+        document.write(arr.toString() + "<br/>");
+        document.write("a4 : " + a4 + "<br/>");
+        document.write("길이 : " + arr.length + "<br/>");
+
+        //배열 제일 앞에 새로운 멤버를 추가
+        arr.unshift(60);
+        document.write(arr.toString() + "<br/>");
+        document.write("길이 : " + arr.length + "<br/>");
+        
+        var arr2 = [50, 30, 10, 20, 40, 30, 60, 80];
+        var arr3 = ["다", "바", "가", "사", "나", "바"];
+
+        //sort 오름차순 정렬
+        arr2.sort();
+        arr3.sort();
+        document.write("arr2 : " + arr2 + "<br/>");
+        document.write("arr3 : " + arr3 + "<br/>");
+
+        //reverse 내림차순 정렬
+        arr2.reverse();
+        arr3.reverse();
+        document.write("arr2 : " + arr2 + "<br/>");
+        document.write("arr3 : " + arr3 + "<br/>");
+
+    </script>
+</body>
+</html>

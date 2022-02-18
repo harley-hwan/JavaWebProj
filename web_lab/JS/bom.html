@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <script>
+        //Browser Object Model
+
+        function getSize() {
+            var div = document.getElementById("result");
+
+            div.innerHTML = "width : " + window.innerWidth + "<br/>" +
+                            "height : " + window.innerHeight + "<br/>";
+        }
+        function show_alert() {
+            alert("alert 메세지");
+        }
+        function show_confirm() {
+            var div = document.getElementById("result");
+            var res = confirm("확인 취소 버튼을 눌러주세요");
+
+            if(res) {
+                div.innerHTML = "확인을 눌렀습니다";
+            } else {
+                div.innerHTML = "취소를 눌렀습니다";
+            }
+        }
+        function open_window() {
+            window.open("http://www.google.com", "_blank", "width=300, height=300, top=300, left=300");
+        }
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <button onclick="getSize()">화면크기 알아오기</button>
+    <button onclick="show_alert()">alert</button>
+    <button onclick="show_confirm()">confirm</button>
+    <button onclick="open_window()">새창</button>
+</body>
+</html>

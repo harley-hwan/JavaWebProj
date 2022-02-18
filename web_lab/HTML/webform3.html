@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web form 2.0 속성2</title>
+</head>
+<body>
+    <form action="result.html" method="get" id="f1">
+        <input type="text" name="a1"/><br/>
+
+        <button type="submit">확인</button>
+        <!-- formaction 요청할 파일의 주소를 작성 -->
+        <button type="submit" formaction="page1.html">확인2</button>
+    </form>
+        <!-- form : form태그 밖의 input 태그를 form 요소안 포함 -->
+        <input type="text" name="a2" form="f1"/>
+</body>
+</html>

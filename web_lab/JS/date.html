@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+</head>
+<body>
+    <script>
+        //현재 시간
+        var d1 = new Date();
+        document.write("d1 : " + d1 + "<br/>");
+
+        //milliseconds
+        var d2 = new Date(1000);
+        document.write("d2 : " + d2 + "<br/>");
+        document.write("UTC : " + d2.toUTCString() + "<br/>");
+
+        //년도, 월, 일, 시, 분, 초, 밀리초
+        //월 0~11
+        var d3 = new Date(2020, 11, 2, 12, 20, 45, 1000);
+        document.write("d3 : " + d3 + "<br/>");
+
+        var d4 = d3.getFullYear();
+        document.write("년 : " + d4 + "<br/>");
+        var d5 = d3.getMonth();
+        document.write("월 : " + d5 + "<br/>");
+        var d6 = d3.getDate();
+        document.write("일 : " + d6 + "<br/>");
+        var d7 = d3.getHours();
+        document.write("시 : " + d7 + "<br/>");
+        var d8 = d3.getMinutes();
+        document.write("분 : " + d8 + "<br/>");
+        var d9 = d3.getSeconds();
+        document.write("초 : " + d9 + "<br/>");
+        var d10 = d3.getMilliseconds();
+        document.write("밀리초 : " + d10 + "<br/>");
+        var d11 = d3.getDay();
+        document.write("요일 : " + d11 + "<br/>");
+
+        //문자열
+        var d12 = new Date("2019 2 3 22:32:44");
+        document.write("d12 : " + d12 + "<br/>");
+    </script>
+</body>
+</html>

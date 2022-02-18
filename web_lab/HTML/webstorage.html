@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹스토리지</title>
+    <script>
+        // 단일주석
+        /* 여러줄 주석 */
+        function save() {
+            var a1 = document.getElementById("a1");
+            var a2 = document.getElementById("a2");
+
+            sessionStorage.data1 = a1.value;
+            localStorage.data2 = a2.value;
+        }
+
+        function load() {
+            var result = document.getElementById("result");
+
+            result.innerHTML = "session : " + sessionStorage.data1 + "<br/>" +
+                             "local : " + localStorage.data2 + "<br/>";
+        }
+
+    </script>
+    <style>
+        /* 주석 */
+    </style>
+</head>
+<body>
+    <!-- 세션 스토리지 : 브라우저를 종료하면 데이터가 삭제 -->
+    <!-- 로컬 스토리지 : 브라우저가 종료되더라도 데이터가 유지-->
+    <input type="text" id="a1"/><br/>
+    <input type="text" id="a2"/><br/>
+
+    <button type="button" onclick="save()">저장하기</button>
+    <hr/>
+    <div id="result"></div>
+    <button type="button" onclick="load()">읽어오기</button>
+    <hr/>
+    <a href="result.html">result</a>
+</body>
+</html>

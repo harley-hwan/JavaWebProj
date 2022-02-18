@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic3</title>
+    <style>
+        /* p {
+            background-color: blue;
+        } */
+
+        /* 선택자1선택자2  조건에 만족하는 태그가 선택 */
+        p.c1 {
+            color: red;
+        }
+
+        div.c1 {
+            color: green;
+        }
+
+        /* 선택자1 선택자2  : 선택자1을 선택하고 내부에있는 선택자2를 적용*/
+        #a1 p {
+            color: blueviolet;
+        }
+
+        /* 선택자1 > 선택자2 : 선택자1의 태그를 선택하고 그 하위에있는 선택자2를 적용 */
+        #a1 > div > p {
+            background-color: red;
+        }
+
+        /* 선택자1,선택자2,선택자3.... */
+        .c3, .c4, .c5 {
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <p class="c1">c1 p태그</p>
+    <p class="c2">c2 p태그</p>
+    <div class="c1">c1 div태그</div>
+    <div class="c2">c2 div태그</div>
+    <hr/>
+    <div id="a1">
+        <div>
+            <p>id a1인 div태그 안에 div태그안에 p태그</p>
+        </div>
+        <p>div 태그 아래의 p태그</p>
+    </div>
+    <hr/>
+    <p class="c3">c3 p태그</p>
+    <p class="c4">c4 p태그</p>
+    <p class="c5">c5 p태그</p>
+
+</body>
+</html>

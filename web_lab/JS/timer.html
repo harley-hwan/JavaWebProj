@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머</title>
+    <script>
+        function timer_click() {
+            var div = document.getElementById("result");
+
+            //지정된 시간(millisecond)이 지난후 함수 호출
+            setTimeout(function() {
+                var obj = new Date();
+                div.innerHTML = obj.toString();
+            }, 1000);
+        }
+
+        var timer;
+
+        function timer_start() {
+            var div = document.getElementById("result");
+
+            //지정된 시간마다 지속적으로 호출
+            timer = setInterval(function(){
+                var obj = new Date();
+                div.innerHTML = obj.toString();
+            }, 1000);
+        }
+
+        function timer_stop() {
+            clearInterval(timer);
+        }
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <button onclick="timer_click()">setTimeOut</button>
+    <button onclick="timer_start()">Timer Start</button>
+    <button onclick="timer_stop()">Timer Stop</button>
+</body>
+</html>

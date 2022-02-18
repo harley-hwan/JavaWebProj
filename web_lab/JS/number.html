@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number 객체</title>
+</head>
+<body>
+    <script>
+        //Infinity 무한대
+        if(Infinity > 100000)
+        {
+            document.write("infinity가 크다<br/>");
+        }
+
+        if(Infinity < 100000)
+        {
+            document.write("infinity가 작다<br/>");
+        }
+
+        var n1 = 2 / 0;
+        var n2 = -2 / 0;
+        document.write("n1 : " + n1 + "<br/>");
+        document.write("n2 : " + n2 + "<br/>");
+
+        //Nan 숫자가 아니다
+        var n3 = 100 - "absdsf";
+        document.write("n3 : " + n3 + "<br/>");
+
+        var n4 = 100 - "50";
+        document.write("n4 : " + n4 + "<br/>");
+
+        //inNaN 숫자여부를 판별(숫자가 아니면 true)
+        if(isNaN(n3))
+        {
+            document.write("숫자가 아니다<br/>");
+        }
+        else
+        {
+            document.write(n3);
+        }
+
+        var n5 = "100";
+        var n6 = 100;
+        var n7 = n5 + n6;
+        document.write("n7 : " + n7 + "<br/>");
+
+        //parseInt 정수로 변환
+        var n8 = parseInt(n5) + n6;
+        document.write("n8 : " + n8 + "<br/>");
+
+        //parseFloat 실수로 변환
+        var n9 = "11.11";
+        var n10 = 11.11;
+        var n11 = parseFloat(n9) + n10;
+        document.write("n11 : " + n11 + "<br/>");
+    </script>
+</body>
+</html>

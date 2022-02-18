@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.c5 {
+    color: blue;
+    background-color: red;
+    font-weight: bold;
+}
+
+.c6 {
+    color: yellow;
+    background-color: blueviolet;
+    font-style: italic;
+}

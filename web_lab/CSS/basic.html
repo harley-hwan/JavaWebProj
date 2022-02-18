@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic</title>
+    <link rel="stylesheet" href="basic.css"/>
+    <style>
+        .c1 {
+            color : green;
+            background-color: red;
+        }
+
+        .c2 {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .c3 {
+            color: blue;
+        }
+
+        .c4 {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- inline -->
+    <p style="color:red; background-color: black;">inline 방식</p>
+    <p style="color: yellow; background-color: blue;">inline 방식2</p>
+
+    <!-- class -->
+    <p class="c1">class 방식</p>
+    <p class="c2">class 방식2</p>
+    <p class="c1 c2">class 방식3</p>
+
+    <!-- 적용 순서 class -> inline -->
+    <p class="c4 c3" style="color: yellow;">적용순서</p>
+
+    <!-- 외부 파일 -->
+    <p class="c5">외부파일</p>
+    <p class="c6">외부파일2</p>
+</body>
+</html>

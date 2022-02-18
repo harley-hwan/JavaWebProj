@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        //Document Object Model
+        //innerHTML : 태그 내부에 html 코드를 설정
+        //getElementsByTagName : 태그 이름을 통해 태그객체를 가져온다
+        //getElementById : id 속성을 통해 태그 객체를 가져온다
+        //getElementsByClassName : class 속성을 통해 태그객체를 가져온다
+
+        function find_tagName() {
+            var div = document.getElementsByTagName("div");
+
+            for(var i in div) {
+                div[i].innerHTML = "태그로 검색<br/>";
+            }
+        }
+
+        function find_id() {
+            var t1 = document.getElementById("test1");
+            var t2 = document.getElementById("test2");
+
+            t1.innerHTML = "id 속성 검색";
+            t2.innerHTML = "id 속성 검색";
+        }
+        
+        function find_class() {
+            var c1 = document.getElementsByClassName("c1");
+
+            for(var i in c1) {
+                c1[i].innerHTML = "class 속성 검색";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="find_tagName()">태그이름</button>
+    <button onclick="find_id()">id 속성</button>
+    <button onclick="find_class()">class속성</button>
+
+    <div id="test1" class="c1"></div>
+    <div id="test2" class="c1"></div>
+</body>
+</html>

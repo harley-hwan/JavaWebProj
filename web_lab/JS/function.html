@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        function f1() {
+            document.write("f1 함수 호출<br/>");
+        }
+
+        //익명함수
+        var f3 = function() {
+            document.write("익명 함수<br/>");
+        }
+
+        //매개변수
+        function f4(a, b) {
+            document.write("f4 함수 호출<br/>");
+            document.write("a : " + a + "<br/>");
+            document.write("b : " + b + "<br/>");
+        }
+
+        function f5() {
+            document.write("f5 함수 호출<br/>");
+            //arguments 배열
+            //모든함수들은 arguments배열이 자동으로 생성되고 여기에 값이 저장
+            document.write("arguments : " + arguments.length + "<br/>");
+
+            for(var i in arguments)
+            {
+                document.write("i : " + arguments[i] + "<br/>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        f1();
+
+        // // 함수의 이름이 함수의 메모리주소값을 담은 변수로 취급
+        // // 함수의 주소값을 다른변수에 담는것이 가능
+        var f2 = f1;
+
+        f2();
+        f3();
+        f4();
+        f4(10);
+        f4(10, 30);
+        f4(10, 30, 40, 50, 60);
+
+        f5();
+        f5(10);
+        f5(10, 20);
+        f5(10, 20, 30, 40, 50);
+    </script>
+</body>
+</html>

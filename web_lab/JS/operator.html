@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        //산술연산자
+        var a = 10;
+        var b = 3;
+
+        var c = a + b;
+        var c2 = a - b;
+        var c3 = a * b;
+        var c4 = a / b;
+        var c5 = a % b;
+        document.write("c : " + c + "<br/>");
+        document.write("c2 : " + c2 + "<br/>");
+        document.write("c3 : " + c3 + "<br/>");
+        document.write("c4 : " + c4 + "<br/>");
+        document.write("c5 : " + c5 + "<br/>");
+
+        a++;
+        //a = a + 1;
+        document.write("a : " + a + "<br/>");
+
+        a--;
+        //a = a - 1;
+        document.write("a : " + a + "<br/>");
+
+        //대입연산자
+        var d = 10;
+        var e = d;
+
+        a += b;
+        //a = a + b;
+        a -= b;
+        //a = a - b;
+        a *= b;
+        //a = a * b;
+
+        //비교연산자
+        a = 10;
+        b = 3;
+
+        document.write(a == b);
+        document.write("<br/>");
+
+        c = '10';
+        document.write(a == c);
+        document.write("<br/>");
+        document.write(a === c);//타입과 값이 모두 같아야 true
+        document.write("<br/>");
+        document.write(a != b);
+        document.write("<br/>");
+        document.write(a !== b);
+        document.write("<br/>");
+        document.write(a > b);
+        document.write("<br/>");
+        document.write(a < b);
+        document.write("<br/>");
+        document.write(a >= b);
+        document.write("<br/>");
+        document.write(a <= b);
+        document.write("<br/>");
+
+        // ? :
+        var f = a < b ? 1 : 0;
+        document.write("f : " + f);
+        document.write("<br/>");
+
+        //논리연산자
+        a = 10;
+        b = 20;
+
+        //and 연산
+        document.write(a > 10 && b > 10);
+        document.write("<br/>");
+
+        //or 연산
+        document.write(a > 10 || b > 10);
+        document.write("<br/>");
+
+        //not
+        document.write(!(a > 10));
+        document.write("<br/>");
+
+        //타입연산자
+        var a1 = true;
+
+        var b1 = typeof a1;
+        document.write("b1 : " + b1 + "<br/>");
+    </script>
+</body>
+</html>

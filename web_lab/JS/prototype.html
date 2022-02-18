@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+    <script>
+        function Obj() {
+            this.a = 100;
+            this.b = 200;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var obj1 = new Obj();
+        var obj2 = new Obj();
+
+        document.write("obj1.a : " + obj1.a + "<br/>");
+        document.write("obj1.b : " + obj1.b + "<br/>");
+        document.write("obj2.a : " + obj2.a + "<br/>");
+        document.write("obj2.b : " + obj2.b + "<br/>");
+
+        //같은 생성자 함수를 통해 만들어진 객체는 prototype 이라는 공통의 객체에 접근할 수있다
+        Obj.prototype.c = 500;
+
+        document.write("obj1.c : " + obj1.c + "<br/>");
+        document.write("obj2.c : " + obj2.c + "<br/>");
+
+        Obj.prototype.c = 1000;
+        document.write("obj1.c : " + obj1.c + "<br/>");
+        document.write("obj2.c : " + obj2.c + "<br/>");
+    </script>
+</body>
+</html>

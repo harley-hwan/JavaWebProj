@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스</title>
+    <script>
+        function drawRect() {
+            var mycanvas = document.getElementById("c1");
+            //context 작업을 하기위해 필요한 정보를 갖고있는것
+            var ctx = mycanvas.getContext("2d");
+            ctx.fillRect(20, 20, 100, 100);//좌측상단좌표, 가로사이즈, 세로사이즈
+            ctx.clearRect(45, 45, 60, 60);
+            ctx.strokeRect(50, 50, 50, 50);
+        }
+
+        function drawArc() {
+            var mycanvas = document.getElementById("c1");
+            //context 작업을 하기위해 필요한 정보를 갖고있는것
+            var ctx = mycanvas.getContext("2d");
+            ctx.beginPath();//선을 그리기 시작
+            //중심점x, 중심점y, 반지름, 시작점, 종료점, 방향
+            //0은 3시방향 0.5 : 6시, 
+            //true : 반시계방향 false : 시계방향
+            ctx.arc(75, 75, 50,0, Math.PI * 2, true);
+
+            ctx.moveTo(110, 75);
+            ctx.arc(75, 75, 35, 0, Math.PI, false);
+
+            ctx.moveTo(65, 65);
+            ctx.arc(60, 65, 5, 0, Math.PI * 2, true);
+
+            ctx.moveTo(95, 65);
+            ctx.arc(90, 65, 5, 0, Math.PI * 2, true);
+
+            ctx.stroke();//선으로 그린다
+            //ctx.fill();//색으로 채워준다
+        }
+
+        function drawLine() {
+            var mycanvas = document.getElementById("c1");
+            var ctx = mycanvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.moveTo(25, 25);
+            ctx.lineTo(25, 100);
+            ctx.lineTo(105, 25);
+            ctx.closePath();
+            ctx.stroke();
+            //ctx.fill();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="c1" width="200px" height="200px" style="border: 1px solid black;"></canvas><br/>
+    <button type="button" onclick="drawRect()">네모</button>
+    <button type="button" onclick="drawArc()">원</button>
+    <button type="button" onclick="drawLine()">선</button>
+</body>
+</html>

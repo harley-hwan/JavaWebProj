@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        div {
+            border : 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function mouse_click() {
+            alert("마우스 클릭");
+        }
+
+        window.onload = function() {
+            var div = document.getElementById("a1");
+
+            div.onmouseover = function() {
+                alert("마우스 오버");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div onclick="mouse_click()"></div>
+    <div id="a1"></div>
+</body>
+</html>

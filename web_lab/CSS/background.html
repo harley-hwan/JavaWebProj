@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경</title>
+    <style>
+        p {
+            width: 100%;
+            height: 200px;
+            border : 1px solid black;
+        }
+
+        .c1 {
+            /* 배경색 */
+            background-color: yellow;
+        }
+        .c2 {
+            /* 배경이미지 */
+            background-image: url(../img/bmw.png);
+            /* 반복여부 */
+            background-repeat: repeat; /*기본*/
+            background-repeat: repeat-x; /*가로방향*/
+            background-repeat: repeat-y; /*세로방향*/
+            background-repeat: no-repeat; /*반복안함*/
+            background-repeat: space; /*이미지에 맞춰서 반복*/
+            background-repeat: round; /*이미지가 짤리지않게 확대 축소 */
+        }
+        .c3 {
+            /* 배경이미지 위치 */
+            background-image: url(../img/bmw.png);
+            /* background-repeat: no-repeat; */
+            background-position: 100px 50px;
+        }
+        .c4 {
+            /* 배경이미지 스크롤 */
+            background-image: url(../img/bmw.png);
+            background-repeat: no-repeat;
+            background-attachment: scroll; /*기본*/
+            background-attachment: fixed; /*브라우저 상단에 고정*/
+        }
+        .c5 {
+            background-image: url(../img/bmw.png);
+            background-repeat: no-repeat;
+            background-attachment: local; /*내부에서  스크롤*/
+            overflow: scroll; /*태그가 스크롤*/
+        }
+        .c6 {
+            /* 한번에 모든속성을 설정할때 */
+            background: url(../img/bmw.png) no-repeat 100px 50px scroll;
+        }
+
+        /* body {
+            background-image: url(../img/bmw.png);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-attachment: fixed;
+        } */
+    </style>
+
+</head>
+<body>
+    <p class="c1">c1 태그</p>
+    <p class="c2">c2 태그</p>
+    <p class="c3">c3 태그</p>
+    <p class="c4">c4 태그</p>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p class="c5">c5 태그
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/> 
+    </p>
+    <p class="c6">c6 태그</p>
+</body>
+</html>

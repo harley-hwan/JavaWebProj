@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string 객체</title>
+</head>
+<body>
+    <script>
+        var str1 = "abcdef";
+        var str2 = "가나다라마바사";
+
+        //문자열 길이
+        document.write("str1 길이 : " + str1.length + "<br/>");
+        document.write("str2 길이 : " + str2.length + "<br/>");
+
+        //문자열의 위치 인덱스 반환
+        var idx1 = str1.indexOf("cde");
+        document.write("idx1 : " + idx1 + "<br/>");
+
+        //문자열 일부를 반환
+        var idx2 = str1.substring(1, 3);
+        document.write("idx2 : " + idx2 + "<br/>");
+
+        //문자열 변경
+        var str3 = "javascript html css";
+        var str4 = str3.replace("javascript", "java");
+        document.write("str4 : " + str4 + "<br/>");
+
+        //문자열 대소문자 변경
+        var str5 = "aBcdEf";
+        var str6 = str5.toUpperCase();
+        var str7 = str5.toLowerCase();
+        document.write("str6 : " + str6 + "<br/>");
+        document.write("str7 : " + str7 + "<br/>");
+
+        //문자열 합치기
+        var str8 = "abc";
+        var str9 = str8.concat("def");
+        document.write("str9 : " + str9 + "<br/>");
+        var str10 = str8 + "def";
+        document.write("str10 : " + str10 + "<br/>");
+
+        //문자열 나누기
+        var str11 = "10,20,30,40,50";
+        var str12 = str11.split(",");
+
+        for(var i in str12)
+        {
+            document.write("str12 : " + str12[i] + "<br/>");
+        }
+
+    </script>
+</body>
+</html>

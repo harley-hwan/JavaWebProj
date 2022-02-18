@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 1</title>
+    <script>
+        //리터럴을 이용한 객체 생성
+        var obj = {
+            a1 : 100,
+            "a2" : 11.11,
+            a3 : true,
+            a4 : "문자열",
+            a5 : [10, 20, 30],
+            a6 : function() {
+                document.write("obj객체의 함수<br/>");
+            },
+            a7 : { b1 : 500, b2 : "객체안에 객체" }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write("obj.a1 : " + obj.a1 + "<br/>");
+        document.write("obj.a2 : " + obj.a2 + "<br/>");
+        document.write("obj.a3 : " + obj.a3 + "<br/>");
+        document.write("obj.a4 : " + obj.a4 + "<br/>");
+
+        for(var i in obj.a5)
+        {
+            document.write("obj.a5 : " + obj.a5[i] + "<br/>");
+        }
+
+        obj.a6();
+
+        document.write("obj.a7 : " + obj.a7.b1 + "<br/>");
+        document.write("obj.a7 : " + obj.a7.b2 + "<br/>");
+
+        obj.a1 = 500;
+        document.write("obj.a1 : " + obj.a1 + "<br/>");
+
+        obj["a1"] = 5000;
+        document.write("obj.a1 : " + obj["a1"] + "<br/>");
+    </script>
+</body>
+</html>

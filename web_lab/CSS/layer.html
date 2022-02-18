@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이어</title>
+    <style>
+        .c1 {
+            width: 500px;
+            height: 100px;
+            background-color: red;
+            left: 10px;
+            top: 10px;
+            position: absolute;
+            /* 레이어의 인덱스로 지정된 숫자가 높을수록 상단 레이어 */
+            z-index: 40;
+        }
+        .c2 {
+            width: 500px;
+            height: 100px;
+            background-color: blue;
+            left: 60px;
+            top: 60px;
+            position: absolute;
+            z-index: 30;
+        }
+        .c3 {
+            width: 500px;
+            height: 100px;
+            background-color: green;
+            left: 110px;
+            top: 110px;
+            position: absolute;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+</body>
+</html>

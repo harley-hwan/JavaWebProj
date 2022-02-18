@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2d 변형</title>
+    <style>
+        .c1 {
+            /* 위치 이동 */
+            transform: translate(20px, 20px);
+        }
+        .c2 {
+            /* 회전 */
+            transform: rotate(45deg);
+        }
+        .c3 {
+            /* 확대축소 */
+            transform: scale(2);
+        }
+        .c4 {
+            /* 축을 기준으로 회전 */
+            transform: skewX(45deg);
+            transform: skewY(10deg);
+            transform: skew(50deg, 50deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../img/android.png"/>
+    <img src="../img/android.png" class="c1"/>
+    <img src="../img/android.png" class="c2"/>
+    <img src="../img/android.png" class="c3"/>
+    <img src="../img/android.png" class="c4"/>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <script>
+        //태그의 속성 알아오기
+        function get_attr() {
+            var img = document.getElementById("a1");
+            var result = document.getElementById("result");
+
+            result.innerHTML = "id : " + img.id + "<br/>" +
+                                "src : " + img.src + "<br/>" +
+                                "width : " + img.width + "<br/>" +
+                                "height : " + img.height + "<br/>";
+
+        }
+        //속성 설정하기
+        function set_attr() {
+            var img = document.getElementById("a1");
+
+            img.width = 500;
+            img.height = 300;
+        }
+
+        //CSS 설정하기
+        function set_style() {
+            var str = document.getElementById("a2");
+
+            str.style.color = "red";
+            str.style.fontSize = "20px";
+        }
+
+        //innerHTML 
+        function set_html() {
+            var div = document.getElementById("a3");
+
+            div.innerHTML = '<a href="http://www.google.co.kr">' +
+                            "<img src='../img/bmw.png'/></a>";
+        }
+    </script>
+</head>
+<body>
+    <img id="a1" src="../img/android.png" width="120" height="30"/><br/>
+    <button onclick="get_attr()">속성 읽어오기</button><br/>
+    <button onclick="set_attr()">속성 설정하기</button><br/>
+    <div id="result"></div>
+    <p id="a2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <button onclick="set_style()">CSS 설정하기</button>
+    <hr/>
+    <div id="a3"></div>
+    <button onclick="set_html()">innerHTML 사용</button>
+</body>
+</html>
